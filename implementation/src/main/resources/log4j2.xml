@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <CustomLevels>
+        <CustomLevel name="COST_EVALUATION" intLevel="50" />
+        <CustomLevel name="TRANSACTION_EVALUATION" intLevel="75" />
+        <CustomLevel name="CONTEST_PARTICIPATION_EVALUATION" intLevel="85" />
+    </CustomLevels>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <!--<PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" /> -->
+        </Console>
+        <File name="costEvaluation" fileName="logs/cost_eval.csv">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS},%msg%n" />
+        </File>
+        <File name="transactionEvaluation" fileName="logs/tx_eval.csv">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS},%msg%n" />
+            <Filters>
+                <!-- deny COST_EVALUATION -->
+                <ThresholdFilter level="COST_EVALUATION" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <!-- accept TRANSACTION_EVALUATION -->
+                <ThresholdFilter level="TRANSACTION_EVALUATION" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+        <File name="contestParticipationEvaluation" fileName="logs/contest_eval.csv">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS},%msg%n" />
+            <Filters>
+                <!-- deny TRANSACTION_EVALUATION + COST_EVALUATION -->
+                <ThresholdFilter level="TRANSACTION_EVALUATION" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <!-- accept CONTEST_PARTICIPATION_EVALUATION -->
+                <ThresholdFilter level="CONTEST_PARTICIPATION_EVALUATION" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+    </Appenders>
+    <Loggers>
+<!--        <Root level="debug" additivity="false">-->
+        <Root level="info" additivity="false">
+            <AppenderRef ref="console" level="info"/>
+<!--            <AppenderRef ref="console" level="debug"/>-->
+            <AppenderRef ref="costEvaluation" level="COST_EVALUATION"/>
+            <AppenderRef ref="transactionEvaluation" level="TRANSACTION_EVALUATION"/>
+            <AppenderRef ref="contestParticipationEvaluation" level="CONTEST_PARTICIPATION_EVALUATION"/>
+        </Root>
+    </Loggers>
+</Configuration>

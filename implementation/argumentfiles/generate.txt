@@ -1,0 +1,9 @@
+#--urlrpc http://matthias:password@127.0.0.1:18443/
+--urlrpc http://matthias:password@127.0.0.1:18443/,http://matthias:password@127.0.0.1:18445/,http://matthias:password@127.0.0.1:18447/
+#--address "bcrt1qejv7wf8ax4lkag9w3hclyzu47zgj7q6eqv6s60"
+--address "bcrt1qyy44rea9a79y8y0fhhnttvype6wcz40gpqgg0h"
+--chain REGTEST
+generateblocks
+--runtime 460
+--blockInterval 10
+--chainOffset 2

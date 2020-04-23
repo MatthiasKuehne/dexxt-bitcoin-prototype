@@ -1,0 +1,15 @@
+#--urlrpc http://matthias:password@127.0.0.1:18443/
+--urlrpc http://matthias:password@127.0.0.1:18443/,http://matthias:password@127.0.0.1:18445/,http://matthias:password@127.0.0.1:18447/
+--address "bcrt1qhwu5jng39tfehrxtjuhwc5wnv5n9sxrn0rc095"
+--chain REGTEST
+evaluationrun
+-g 1
+-u
+#-m FULL
+-m HASHREFERENCE
+-c caae72556fc36d3a8c859029047119b712717419,ca43f8812da1a4219d91e83a6af49d7dfd7c9a67,3d716c6f95050fc1aacac4ae6b1da4b71bdbfdcc,7bafc011aa9a94f5a2106a8d55d0196796fe5e84,1e915de3c3f543b33d1e290ecf797ca0299eae1e,4ede41dd3b87029025249a27fc04c9f971741c69,f177543aa32d9f579fd21ef72e56004a51565ae1,c708ab808319d9169f3cfbeccaf375e18a6e7794,b61c76a540fa2ad239dbcd4215e43f6aafe6d3bb#,6c5cee6ebe9ef4868207ca51b3cfd6b4473f416d
+#--allowDoubleSpend
+#--enableAutoUnlocking
+#--forceVetos
+--runtime 300
+--transactionTime 40
