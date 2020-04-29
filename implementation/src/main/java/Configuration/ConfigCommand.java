@@ -106,7 +106,7 @@ public class ConfigCommand implements Callable<Integer> {
         return 0;
     }
 
-    @CommandLine.Command(name="evaluationrun", description = "Runs test stuff.")
+    @CommandLine.Command(name="evaluationrun", description = "Runs evaluation.")
     public int evaluationRun(@CommandLine.Option(names = {"-g", "--genesisBlock"}, description = "The height of the DeXTT genesis block, same for all specified blockchains.", required = true, paramLabel = "<genesisBlockHeight>") int genesisBlockHeight,
                              @CommandLine.Option(names = {"-u", "--processUnconfirmed"}, description = "Processes unconfirmed Transactions, which are not yet in a block.", paramLabel = "<processUnconfirmedTransactions>") boolean processUnconfirmedTransactions,
                              @CommandLine.Option(names = {"-m", "--contestMode"}, description = "Mode for contest transactions: ${COMPLETION-CANDIDATES}", required = true, paramLabel = "<contestMode>") ContestMode contestMode,
