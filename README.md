@@ -9,6 +9,6 @@ The DeXTT protocol is described in detail by the following scientific publicatio
 
 
 
-The program is started via the command line and requires CLI arguments, which can optionally be provided via argumentfiles (examples in `/implementation/argumentfiles`) by specifying a file as `@\<file>`.
+The program is started via the command line and requires CLI arguments, which can optionally be provided via argumentfiles (examples in `/implementation/argumentfiles`) by specifying a file as `@<file>`.
 
 Inside the `/scripts` folder, bash scripts to start multiple parallel evaluation runs are provided.
