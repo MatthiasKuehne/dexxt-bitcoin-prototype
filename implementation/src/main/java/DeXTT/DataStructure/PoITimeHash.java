@@ -1,7 +1,6 @@
 package DeXTT.DataStructure;
 
 import java.math.BigInteger;
-import java.util.Comparator;
 import java.util.Date;
 
 public class PoITimeHash implements Comparable<PoITimeHash> {

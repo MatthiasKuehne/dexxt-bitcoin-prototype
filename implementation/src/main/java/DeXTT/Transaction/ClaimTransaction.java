@@ -1,20 +1,19 @@
 package DeXTT.Transaction;
 
+import DeXTT.Cryptography;
 import DeXTT.DataStructure.DeXTTAddress;
+import DeXTT.DataStructure.ProofOfIntentData;
 import DeXTT.DataStructure.ProofOfIntentFull;
-import DeXTT.Wallet;
 import DeXTT.Exception.AlreadyAddedTransactionException;
 import DeXTT.Exception.UnconfirmedTransactionExecutionException;
-import DeXTT.DataStructure.ProofOfIntentData;
 import DeXTT.Transaction.Bitcoin.BitcoinClaimDataTransaction;
 import DeXTT.Transaction.Bitcoin.BitcoinClaimSigTransactionA;
 import DeXTT.Transaction.Bitcoin.BitcoinClaimSigTransactionB;
 import DeXTT.Transaction.Bitcoin.BitcoinTransaction;
-import DeXTT.Cryptography;
+import DeXTT.Wallet;
 import org.web3j.crypto.Sign;
 
 import java.math.BigInteger;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;

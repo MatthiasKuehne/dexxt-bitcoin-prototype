@@ -17,7 +17,6 @@ declare -a btcAddresses=("bcrt1qejv7wf8ax4lkag9w3hclyzu47zgj7q6eqv6s60" "bcrt1q3
 
 echo "Importing private keys..."
 for key in ${privateKeys[@]}; do
-   #echo "$key"
    bitcoin-cli -datadir="$1" importprivkey "$key" "dexxt"
 done
 echo "Done importing private keys."

@@ -1,11 +1,11 @@
 package DeXTT.Transaction.Bitcoin;
 
 import DeXTT.DataStructure.DeXTTAddress;
-import DeXTT.Exception.AlreadyAddedTransactionException;
 import DeXTT.DataStructure.ProofOfIntentData;
+import DeXTT.Exception.AlreadyAddedTransactionException;
+import DeXTT.Helper;
 import DeXTT.Transaction.ClaimTransaction;
 import DeXTT.Transaction.Transaction;
-import DeXTT.Helper;
 
 import java.math.BigInteger;
 import java.util.Date;

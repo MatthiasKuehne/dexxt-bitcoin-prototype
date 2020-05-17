@@ -1,10 +1,11 @@
 package Configuration;
+
 import DeXTT.DataStructure.DeXTTAddress;
-import Runners.EvaluationRunner;
-import Runners.SystemTestRunner;
-import Runners.BlockGenerateRunner;
-import Runners.MintRunner;
 import DeXTT.Helper;
+import Runners.BlockGenerateRunner;
+import Runners.EvaluationRunner;
+import Runners.MintRunner;
+import Runners.SystemTestRunner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import picocli.CommandLine;

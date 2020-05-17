@@ -34,11 +34,8 @@ fi
 
 configs=0
 nextPort=18443
-#for unconfirmed in {1..1}; do
 for unconfirmed in {0..1}; do
-    #for chainoffset in 0; do
     for chainoffset in 0 200 300; do #in seconds. => 0m, 3.333m, 5m
-        #for txtime in {231..231..231}; do
         for txtime in {231..3234..231}; do
         
             if [ $txtime == 3234 ]; then
@@ -80,7 +77,6 @@ for unconfirmed in {0..1}; do
 
                     if [ ! -z "$pathsToCreate" ]; then
                         if [[ ! " ${pathsToCreate[@]} " =~ " ${directoryName} " ]]; then
-                            #((configs+=1))
                             echo "Configuration not in ""$failedConfFile"": ""$directoryName"
                             continue
                         fi
@@ -139,7 +135,6 @@ for unconfirmed in {0..1}; do
                             done
                         fi
 
-                        #if false; then
                         urls="--urlrpc http://matthias:password@127.0.0.1:"${rpcports[1]}"/,http://matthias:password@127.0.0.1:"${rpcports[2]}"/,http://matthias:password@127.0.0.1:"${rpcports[3]}"/"
                         # create argumentfiles for DeXTT-BTC
                         touch "mint.txt"
@@ -191,7 +186,6 @@ for unconfirmed in {0..1}; do
                                 java -Xms256m -Xmx256m -jar "$originalPath"/DeXTT-Bitcoin-1.0-SNAPSHOT.jar @"$filename" &> "regtest-"$addr".log" &
                             fi
                         done
-                        #fi
 
                         if [ $startprograms == 1 ]; then
                             sleep 1

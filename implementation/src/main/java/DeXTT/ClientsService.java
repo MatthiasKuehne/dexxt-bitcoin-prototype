@@ -71,7 +71,6 @@ public class ClientsService {
         globalEventBus.getEventBus().register(this);
 
         this.executorService = Executors.newScheduledThreadPool(10);
-//        this.executorService = Executors.newScheduledThreadPool(5);
         this.clientsAccessible = new HashMap<>();
     }
 
@@ -286,9 +285,7 @@ public class ClientsService {
                 this.contestManager.addPoiEndTime(event.getPoi().getPoiData().getEndTime(), event.getAlphaData());
             } else if (!this.contestManager.participatedIn(event.getAlphaData()) && this.isAfterBlockChainTime(event.getPoi().getPoiData().getEndTime())) { // not participated AND Endtime after current Blockchain time
                 // not receiver, no need to save endtime, but participate in contest
-//                if (!this.contestManager.isContestParticipant(event.getAlphaData(), this.deXTTAddress)) {
-                    this.contestManager.addStartedContest(event.getAlphaData(), event.getPoi()); // save to check in "newBLockFoundEvent", is triggered afterwards
-//                }
+                this.contestManager.addStartedContest(event.getAlphaData(), event.getPoi()); // save to check in "newBLockFoundEvent", is triggered afterwards
             }
         }
     }

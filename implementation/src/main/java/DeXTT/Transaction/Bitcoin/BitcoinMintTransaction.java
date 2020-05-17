@@ -1,9 +1,9 @@
 package DeXTT.Transaction.Bitcoin;
 
 import DeXTT.DataStructure.DeXTTAddress;
+import DeXTT.Helper;
 import DeXTT.Transaction.MintTransaction;
 import DeXTT.Transaction.Transaction;
-import DeXTT.Helper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

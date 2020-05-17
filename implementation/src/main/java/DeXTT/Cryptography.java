@@ -3,12 +3,14 @@ package DeXTT;
 import Configuration.Configuration;
 import DeXTT.DataStructure.DeXTTAddress;
 import DeXTT.DataStructure.ProofOfIntentData;
-import DeXTT.Helper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.bitcoinj.core.DumpedPrivateKey;
 import org.bitcoinj.core.ECKey;
-import org.web3j.crypto.*;
+import org.web3j.crypto.ECKeyPair;
+import org.web3j.crypto.Hash;
+import org.web3j.crypto.Keys;
+import org.web3j.crypto.Sign;
 import org.web3j.utils.Numeric;
 
 import java.math.BigInteger;
@@ -169,12 +171,6 @@ public class Cryptography {
         return new BigInteger(1, hash);
     }
 
-    /**
-     *
-     * @param prefix
-     * @param poi
-     * @return
-     */
     private static byte[] encodePacked(String prefix, ProofOfIntentData poi) {
         byte[] prefixBytes = prefix.getBytes(StandardCharsets.UTF_8);
         byte[] encoded = new byte[prefixBytes.length + (32 * 5)]; // 2 byte for each character + 5 times a 32 byte value (2x address, amount, 2x dates)
@@ -203,12 +199,6 @@ public class Cryptography {
         return encoded;
     }
 
-    /**
-     *
-     * @param prefix
-     * @param sigA
-     * @return
-     */
     private static byte[] encodePacked(String prefix, Sign.SignatureData sigA) {
         byte[] prefixBytes = prefix.getBytes(StandardCharsets.UTF_8);
         byte[] encoded = new byte[prefixBytes.length + 65]; // 2 byte for each character + 65 byte sigA

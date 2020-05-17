@@ -1,8 +1,8 @@
 package Communication.Bitcoin;
 
 import Configuration.Configuration;
-import DeXTT.Transaction.Bitcoin.RawBitcoinTransaction;
 import DeXTT.Helper;
+import DeXTT.Transaction.Bitcoin.RawBitcoinTransaction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.web3j.utils.Numeric;

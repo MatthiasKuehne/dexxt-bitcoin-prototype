@@ -6,7 +6,8 @@ import DeXTT.Transaction.Transaction;
 import java.math.BigInteger;
 import java.util.Date;
 
-import static Configuration.Constants.*;
+import static Configuration.Constants.FINALIZE_TRANSACTION_LENGTH;
+import static Configuration.Constants.FINALIZE_TRANSACTION_TYPE;
 
 public class BitcoinFinalizeTransaction extends BitcoinHashReferenceTransaction {
 

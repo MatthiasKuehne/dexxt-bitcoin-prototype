@@ -1,10 +1,10 @@
 package DeXTT.Transaction;
 
+import DeXTT.Cryptography;
 import DeXTT.DataStructure.ProofOfIntentData;
 import DeXTT.Transaction.Bitcoin.BitcoinFinalizeTransaction;
 import DeXTT.Transaction.Bitcoin.BitcoinHashReferenceTransaction;
 import DeXTT.Wallet;
-import DeXTT.Cryptography;
 
 import java.math.BigInteger;
 

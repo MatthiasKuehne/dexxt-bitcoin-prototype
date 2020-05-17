@@ -1,10 +1,13 @@
 package DeXTT.Transaction;
 
-import DeXTT.Exception.FullClaimMissingException;
-import DeXTT.Wallet;
 import DeXTT.Exception.AlreadyAddedTransactionException;
+import DeXTT.Exception.FullClaimMissingException;
 import DeXTT.Exception.UnconfirmedTransactionExecutionException;
-import DeXTT.Transaction.Bitcoin.*;
+import DeXTT.Transaction.Bitcoin.BitcoinClaimDataTransaction;
+import DeXTT.Transaction.Bitcoin.BitcoinClaimSigTransactionA;
+import DeXTT.Transaction.Bitcoin.BitcoinClaimSigTransactionB;
+import DeXTT.Transaction.Bitcoin.BitcoinTransaction;
+import DeXTT.Wallet;
 
 import java.util.List;
 
@@ -35,10 +38,6 @@ public interface Transaction {
 
     void tryToExecute(Wallet wallet) throws UnconfirmedTransactionExecutionException, FullClaimMissingException;
 
-    /**
-     *
-     * @return
-     */
     default boolean canBeExecutedUnconfirmed() {
         return false;
     }

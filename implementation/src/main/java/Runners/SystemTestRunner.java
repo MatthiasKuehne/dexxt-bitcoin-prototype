@@ -16,6 +16,7 @@ import java.rmi.RemoteException;
 
 import static java.lang.System.exit;
 
+// only used for testing without whole evaluationrunner logic
 public class SystemTestRunner {
 
     private static final Logger logger = LogManager.getLogger();

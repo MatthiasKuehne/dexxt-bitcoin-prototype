@@ -1,9 +1,9 @@
 package DeXTT.Transaction.Bitcoin;
 
 import DeXTT.DataStructure.DeXTTAddress;
+import DeXTT.Helper;
 import DeXTT.Transaction.FinalizeVetoTransaction;
 import DeXTT.Transaction.Transaction;
-import DeXTT.Helper;
 
 import java.util.Date;
 

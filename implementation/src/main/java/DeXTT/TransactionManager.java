@@ -7,8 +7,6 @@ import java.util.*;
 
 public class TransactionManager {
 
-    // only save/store TX from Blockchain, not the ones that get out
-
     private Map<BigInteger, List<Transaction>> incompleteTransactions; // maps 8 byte PoI Hash
 
     private Set<String> processedUnconfirmedTxIds;

@@ -2,8 +2,8 @@ package DeXTT;
 
 import DeXTT.DataStructure.DeXTTAddress;
 import DeXTT.DataStructure.ProofOfIntentData;
-import DeXTT.Exception.UnconfirmedTransactionExecutionException;
 import DeXTT.Exception.BitcoinParseException;
+import DeXTT.Exception.UnconfirmedTransactionExecutionException;
 import DeXTT.Transaction.Bitcoin.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

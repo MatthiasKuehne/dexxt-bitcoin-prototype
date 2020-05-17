@@ -10,7 +10,8 @@ import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 
-import static Configuration.Constants.*;
+import static Configuration.Constants.CLAIM_SIG_TRANSACTION_A_LENGTH;
+import static Configuration.Constants.CLAIM_SIG_TRANSACTION_A_TYPE;
 
 public class BitcoinClaimSigTransactionA extends BitcoinClaimTransaction {
 

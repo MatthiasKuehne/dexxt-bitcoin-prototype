@@ -4,21 +4,19 @@ import Communication.RMI.PoIMessengerInterface;
 import Communication.RMI.ProofOfIntentRMI;
 import Communication.RMI.RMIProvider;
 import Configuration.Configuration;
-import DeXTT.Client;
-import DeXTT.DataStructure.*;
-import DeXTT.ClientsService;
-import DeXTT.Wallet;
+import DeXTT.*;
+import DeXTT.DataStructure.DeXTTAddress;
+import DeXTT.DataStructure.PoITimeHash;
+import DeXTT.DataStructure.ProofOfIntentData;
+import DeXTT.DataStructure.VetoFinalizeData;
 import Events.GlobalEventBus;
 import Events.NewBlockFoundEvent;
-import DeXTT.Cryptography;
-import DeXTT.Helper;
 import com.google.common.eventbus.Subscribe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wf.bitcoin.javabitcoindrpcclient.GenericRpcException;
 
 import java.math.BigInteger;
-
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
 import java.rmi.NotBoundException;

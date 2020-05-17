@@ -1,11 +1,11 @@
 package Runners;
 
 import Configuration.Configuration;
-import DeXTT.DataStructure.DeXTTAddress;
 import DeXTT.Client;
+import DeXTT.DataStructure.DeXTTAddress;
+import DeXTT.Helper;
 import DeXTT.Transaction.MintTransaction;
 import DeXTT.Transaction.Transaction;
-import DeXTT.Helper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wf.bitcoin.javabitcoindrpcclient.GenericRpcException;
@@ -25,14 +25,6 @@ public class MintRunner {
         this.configuration = Configuration.getInstance();
     }
 
-    /**
-     *
-     * @param addresses
-     * @param amount
-     * @return  Error code
-     * @throws MalformedURLException
-     * @throws GenericRpcException
-     */
     public int execute(List<String> addresses, BigInteger amount) throws MalformedURLException, GenericRpcException {
         List<Client> clients = new ArrayList<>();
         for (String url: configuration.getUrlRPC()) {

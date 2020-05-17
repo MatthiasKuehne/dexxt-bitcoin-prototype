@@ -7,13 +7,12 @@ import DeXTT.Transaction.Transaction;
 import java.math.BigInteger;
 import java.util.Date;
 
-import static Configuration.Constants.*;
+import static Configuration.Constants.CONTEST_PARTICIPATION_TRANSACTION_LENGTH;
+import static Configuration.Constants.CONTEST_PARTICIPATION_TRANSACTION_TYPE;
 
 public class BitcoinContestTransaction extends BitcoinHashReferenceTransaction {
 
     private DeXTTAddress bitcoinTransactionSender;
-
-//    private Date txTime;
 
     private int confirmations;
 

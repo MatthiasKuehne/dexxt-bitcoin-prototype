@@ -1,9 +1,9 @@
 package DeXTT.Transaction;
 
 import DeXTT.DataStructure.DeXTTAddress;
-import DeXTT.Wallet;
 import DeXTT.Transaction.Bitcoin.BitcoinMintTransaction;
 import DeXTT.Transaction.Bitcoin.BitcoinTransaction;
+import DeXTT.Wallet;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

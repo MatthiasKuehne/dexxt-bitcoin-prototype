@@ -183,7 +183,7 @@ public class Wallet {
 
     private void contest(ProofOfIntentFull poiFull, DeXTTAddress transactionSender, Date txTime) {
         if (!this.verifyPoi(poiFull, txTime)) {
-            return; // or exception?
+            return;
         }
 
         BigInteger alphaData = new BigInteger(1, Cryptography.alphaData(poiFull.getPoiData()));

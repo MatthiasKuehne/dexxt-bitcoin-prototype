@@ -1,5 +1,6 @@
 package DeXTT.Transaction;
 
+import DeXTT.Cryptography;
 import DeXTT.DataStructure.DeXTTAddress;
 import DeXTT.DataStructure.ProofOfIntentData;
 import DeXTT.Exception.FullClaimMissingException;
@@ -7,7 +8,6 @@ import DeXTT.Exception.UnconfirmedTransactionExecutionException;
 import DeXTT.Transaction.Bitcoin.BitcoinContestTransaction;
 import DeXTT.Transaction.Bitcoin.BitcoinHashReferenceTransaction;
 import DeXTT.Wallet;
-import DeXTT.Cryptography;
 
 import java.util.Date;
 

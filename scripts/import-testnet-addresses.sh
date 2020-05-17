@@ -8,7 +8,6 @@ declare -a privateKeys=("cRCFqu3zcDHZoSqWdwhwgEj3gCLSbEtLMp2TzJudebnSKvP7Shvn" "
 
 echo "Importing private keys..."
 for key in ${privateKeys[@]}; do
-   #echo "$key"
    bitcoin-cli importprivkey "$key" "dexxt" false
 done
 echo "Done importing private keys."

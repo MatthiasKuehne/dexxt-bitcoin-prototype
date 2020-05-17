@@ -1,17 +1,17 @@
 package DeXTT;
 
+import Communication.Bitcoin.BitcoinCommunicator;
 import Communication.RMI.ProofOfIntentRMI;
 import Configuration.Configuration;
 import DeXTT.DataStructure.DeXTTAddress;
 import DeXTT.DataStructure.ProofOfIntentFull;
+import DeXTT.Exception.BitcoinParseException;
 import DeXTT.Exception.FullClaimMissingException;
 import DeXTT.Exception.UnconfirmedTransactionExecutionException;
-import DeXTT.Exception.BitcoinParseException;
 import DeXTT.Transaction.Bitcoin.BitcoinTransaction;
+import DeXTT.Transaction.Bitcoin.RawBitcoinTransaction;
 import DeXTT.Transaction.MintTransaction;
 import DeXTT.Transaction.Transaction;
-import DeXTT.Transaction.Bitcoin.RawBitcoinTransaction;
-import Communication.Bitcoin.BitcoinCommunicator;
 import Events.*;
 import Runners.Evaluator;
 import com.google.common.eventbus.EventBus;
@@ -263,9 +263,7 @@ public class Client {
 
     @Subscribe
     public synchronized void contestStartedEvent(ContestStartedEvent event) {
-//        synchronized (this.contestsStarted) {
         this.contestsStarted.put(event.getAlphaData(), event.getPoi());
-//        }
     }
 
     @Subscribe
@@ -300,9 +298,7 @@ public class Client {
             ProofOfIntentFull poiFull = event.getClaimTransaction().getPoiFull();
             BigInteger poiHash = Cryptography.calculateFullPoiHash(poiFull.getPoiData());
 
-//            synchronized (this.contestsStarted) {
             this.contestsStarted.put(poiHash, poiFull);
-//            }
         }
     }
 
@@ -352,10 +348,8 @@ public class Client {
     }
 
     public synchronized boolean hasContestStarted(BigInteger poiHash) {
-//        synchronized (this.contestsStarted) {
         ProofOfIntentFull poi = this.contestsStarted.get(poiHash);
         return poi != null;
-//        }
     }
 
     public Set<BigInteger> getContestsFinalized() {

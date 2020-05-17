@@ -2,7 +2,10 @@ package Runners;
 
 import Configuration.Configuration;
 import Configuration.ContestMode;
-import DeXTT.Transaction.*;
+import DeXTT.Transaction.ClaimTransaction;
+import DeXTT.Transaction.ContestTransaction;
+import DeXTT.Transaction.FinalizeTransaction;
+import DeXTT.Transaction.FinalizeVetoTransaction;
 import com.google.common.math.Stats;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;

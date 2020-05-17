@@ -1,9 +1,7 @@
 package Events;
 
 import DeXTT.DataStructure.DeXTTAddress;
-import DeXTT.DataStructure.ProofOfIntentFull;
 
-import java.math.BigInteger;
 import java.util.Date;
 
 public class VetoFinalizedEvent {
